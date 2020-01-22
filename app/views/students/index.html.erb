@@ -12,6 +12,9 @@
   <%= f.label :mother_cont %>
   <%= f.search_field :mother_cont %>
 
+  <%= f.label :created_at %>
+  <%= f.search_field(:created_at_eq, placeholder: t(:date_format)) %>
+
   <%= f.submit %>
 <% end %>
 
