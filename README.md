@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Things you may want to cover
 
-Things you may want to cover:
+## Requirements:
+* Ruby 2.6.5
+* Postgresql
+* Nodejs 12.14.0
 
-* Ruby version
+## Configuration
+Just clone the project and run
 
-* System dependencies
+```
+  bundle install
+  yarn install
+  cp config/database.yml.sample config/database.yml
+```
 
-* Configuration
+## Database initialization
+Run `pg_ctl start` and then Copy the database.yml.sample to database.yml and add your username and password to postgresql
 
-* Database creation
 
-* Database initialization
+```
+  cp config/database.yml.sample config/database.yml
+```
 
-* How to run the test suite
+## Database creation
+You can create the datable running the command `rails db:create` and then run the migrations `rails db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How to run the test suite
+`bundle exec rspec`
